@@ -763,6 +763,80 @@ a.app-title:hover h3 {
   gap: 14px;
 }
 
+.store-buttons {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.store-button {
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 16px 9px 13px;
+  border: 1px solid rgba(18, 18, 20, 0.12);
+  border-radius: 8px;
+  background: #111113;
+  color: #ffffff;
+  box-shadow: 0 16px 32px rgba(17, 17, 19, 0.15);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.store-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px rgba(17, 17, 19, 0.18);
+}
+
+.store-button-disabled {
+  cursor: default;
+  background: #f7f7f9;
+  color: #8a8a91;
+  box-shadow: none;
+}
+
+.store-button-disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.store-icon {
+  width: 25px;
+  height: 25px;
+  display: inline-grid;
+  place-items: center;
+}
+
+.store-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.store-icon-play svg {
+  fill: currentColor;
+}
+
+.store-button small,
+.store-button strong {
+  display: block;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.store-button small {
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 560;
+  opacity: 0.78;
+}
+
+.store-button strong {
+  font-size: 18px;
+  font-weight: 720;
+}
+
 .app-landing-visual {
   position: relative;
   min-height: 620px;

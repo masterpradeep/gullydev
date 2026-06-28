@@ -1763,6 +1763,7 @@ a.app-title:hover h3 {
 
   .app-shot-rail-duo {
     min-height: 348px;
+    margin-top: 34px;
   }
 
   .app-shot-rail-duo::before {

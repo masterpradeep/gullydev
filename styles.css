@@ -923,8 +923,7 @@ a.app-title:hover h3 {
   background: linear-gradient(135deg, rgba(233, 247, 239, 0.98), rgba(255, 255, 255, 0.96));
 }
 
-.app-shot-copy h2,
-.app-link-panel h2 {
+.app-shot-copy h2 {
   margin: 0;
   color: #111113;
   font-size: clamp(40px, 5.6vw, 68px);
@@ -966,42 +965,6 @@ a.app-title:hover h3 {
 
 .app-shot-phone:nth-child(3) {
   transform: rotate(8deg);
-}
-
-.app-link-panel {
-  margin-top: 58px;
-  padding: 34px 0 0;
-  border-top: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-}
-
-.app-link-panel nav {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.app-link-panel a {
-  min-height: 86px;
-  display: flex;
-  align-items: center;
-  padding: 0 22px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #f8f8fa;
-  color: #111113;
-  font-size: 20px;
-  font-weight: 680;
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
-}
-
-.app-link-panel a:hover {
-  transform: translateY(-1px);
-  border-color: rgba(18, 18, 20, 0.18);
-  background: #ffffff;
 }
 
 .legal-main {
@@ -1436,7 +1399,6 @@ a.app-title:hover h3 {
   .support,
   .app-landing-hero,
   .app-shot-band,
-  .app-link-panel,
   .legal-hero {
     grid-template-columns: 1fr;
     gap: 22px;
@@ -1487,8 +1449,7 @@ a.app-title:hover h3 {
     right: 14%;
   }
 
-  .app-feature-row,
-  .app-link-panel nav {
+  .app-feature-row {
     grid-template-columns: 1fr;
   }
 

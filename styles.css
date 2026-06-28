@@ -271,9 +271,11 @@ svg {
 }
 
 .phone img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
 }
 
 .hero-phone {
@@ -457,7 +459,7 @@ a.app-title:hover h3 {
 }
 
 .product-tag-quidit {
-  color: #138f70;
+  color: var(--quid);
 }
 
 .product-tag-umpcall {
@@ -763,8 +765,12 @@ a.app-title:hover h3 {
   gap: 14px;
 }
 
-.store-buttons {
+.app-landing-actions-secondary {
   margin-top: 18px;
+}
+
+.store-buttons {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -866,7 +872,7 @@ a.app-title:hover h3 {
 }
 
 .app-phone-secondary {
-  right: 0;
+  right: clamp(16px, 2vw, 28px);
   bottom: 64px;
   width: clamp(178px, 19vw, 230px);
   z-index: 1;
@@ -906,10 +912,10 @@ a.app-title:hover h3 {
 
 .app-shot-band {
   margin-top: 42px;
-  padding: clamp(36px, 6vw, 64px);
+  padding: clamp(38px, 5.5vw, 62px);
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
-  gap: clamp(28px, 5vw, 68px);
+  grid-template-columns: minmax(240px, 0.46fr) minmax(0, 1fr);
+  gap: clamp(30px, 4.5vw, 58px);
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
@@ -941,30 +947,32 @@ a.app-title:hover h3 {
 }
 
 .app-shot-rail {
-  min-height: 500px;
+  min-height: 480px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  gap: clamp(8px, 2.2vw, 24px);
+  gap: clamp(14px, 2vw, 22px);
+  padding: 22px 0;
 }
 
 .app-shot-phone {
   position: relative;
   flex: 0 0 auto;
-  width: clamp(152px, 17vw, 206px);
+  width: clamp(132px, 12vw, 174px);
 }
 
 .app-shot-phone:nth-child(1) {
-  transform: rotate(-8deg);
+  transform: translateY(18px) rotate(-4deg);
 }
 
 .app-shot-phone:nth-child(2) {
   z-index: 2;
-  transform: translateY(-18px);
+  width: clamp(150px, 13.8vw, 198px);
+  transform: translateY(-8px);
 }
 
 .app-shot-phone:nth-child(3) {
-  transform: rotate(8deg);
+  transform: translateY(18px) rotate(4deg);
 }
 
 .legal-main {
@@ -1604,16 +1612,20 @@ a.app-title:hover h3 {
   }
 
   .app-landing-visual {
-    min-height: 500px;
+    min-height: clamp(380px, 96vw, 430px);
+    margin-top: -6px;
   }
 
   .app-phone-primary {
-    width: 212px;
+    width: clamp(184px, 52vw, 204px);
+    right: 39%;
+    bottom: 20px;
   }
 
   .app-phone-secondary {
-    width: 160px;
-    bottom: 58px;
+    width: clamp(138px, 40vw, 154px);
+    right: 7%;
+    bottom: 76px;
   }
 
   .app-feature-row {
@@ -1625,16 +1637,33 @@ a.app-title:hover h3 {
   }
 
   .app-shot-rail {
+    position: relative;
+    display: block;
     min-height: 330px;
-    padding-top: 8px;
+    overflow: visible;
+    padding: 0;
   }
 
   .app-shot-phone {
-    width: 128px;
+    position: absolute;
+    bottom: 14px;
+    width: 112px;
+  }
+
+  .app-shot-phone:nth-child(1) {
+    left: 0;
+    transform: translateY(18px) rotate(-5deg);
   }
 
   .app-shot-phone:nth-child(2) {
-    transform: translateY(-10px);
+    left: 50%;
+    width: 136px;
+    transform: translateX(-50%) translateY(-8px);
+  }
+
+  .app-shot-phone:nth-child(3) {
+    right: 0;
+    transform: translateY(18px) rotate(5deg);
   }
 
   .product-visual {

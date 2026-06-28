@@ -1,57 +1,13 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
   <title>GullyDev</title>
-  <rect x="7" y="7" width="114" height="114" rx="30" fill="url(#base)"/>
-  <rect x="8.5" y="8.5" width="111" height="111" rx="28.5" stroke="url(#rim)" stroke-width="3"/>
-  <path d="M68.4 32C49.1 32 35 45.9 35 64.2C35 82.7 49.2 96 68.8 96C79.6 96 89.3 92.1 95 85.4V62.1H66.5V75.1H80.2V79.2C77.6 81.4 73.7 82.8 69.2 82.8C58.1 82.8 50.5 75.2 50.5 64.1C50.5 53 57.9 45.2 68.5 45.2C75.2 45.2 80.5 48.1 84.2 53.6L96.2 45.8C90.4 37.1 80.4 32 68.4 32Z" fill="url(#depth)" transform="translate(5 6)" opacity=".82"/>
-  <path d="M68.4 32C49.1 32 35 45.9 35 64.2C35 82.7 49.2 96 68.8 96C79.6 96 89.3 92.1 95 85.4V62.1H66.5V75.1H80.2V79.2C77.6 81.4 73.7 82.8 69.2 82.8C58.1 82.8 50.5 75.2 50.5 64.1C50.5 53 57.9 45.2 68.5 45.2C75.2 45.2 80.5 48.1 84.2 53.6L96.2 45.8C90.4 37.1 80.4 32 68.4 32Z" fill="url(#face)" filter="url(#lift)"/>
-  <path d="M42 91.5C51.6 83.4 62.3 76.2 73.8 69.8C81 65.8 88 61.5 95 56.5" stroke="#080A10" stroke-width="7.8" stroke-linecap="round" opacity=".88"/>
-  <path d="M42 91.5C51.6 83.4 62.3 76.2 73.8 69.8C81 65.8 88 61.5 95 56.5" stroke="url(#lane)" stroke-width="2.8" stroke-linecap="round"/>
-  <circle cx="95" cy="56.5" r="5.5" fill="url(#playDot)" filter="url(#dotShadow)"/>
-  <circle cx="95" cy="56.5" r="1.8" fill="#F9FFFC"/>
-  <path d="M35 108H95" stroke="url(#ground)" stroke-width="7.5" stroke-linecap="round"/>
+  <rect x="8" y="8" width="112" height="112" rx="30" fill="#111113"/>
+  <rect x="9.5" y="9.5" width="109" height="109" rx="28.5" stroke="#FFFFFF" stroke-opacity=".08" stroke-width="3"/>
+  <path d="M68.5 31.5C48.8 31.5 34.4 45.7 34.4 64.2C34.4 82.9 48.9 96.5 69.1 96.5C80.2 96.5 89.9 92.7 96.2 86V61.7H66.2V75.3H80.8V79.4C78 81.6 74.1 83 69.5 83C58.1 83 50.5 75.4 50.5 64.2C50.5 53 58.1 45.2 68.8 45.2C75.6 45.2 81 48 85.1 53.6L97.3 45.7C91.2 36.8 81 31.5 68.5 31.5Z" fill="#FAFAFA"/>
+  <path d="M38 105H90" stroke="url(#lane)" stroke-width="7" stroke-linecap="round"/>
   <defs>
-    <linearGradient id="base" x1="16" y1="10" x2="114" y2="120" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#151A24"/>
-      <stop offset=".46" stop-color="#080A10"/>
-      <stop offset="1" stop-color="#111113"/>
+    <linearGradient id="lane" x1="38" y1="105" x2="90" y2="105" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00C878"/>
+      <stop offset="1" stop-color="#1D63D9"/>
     </linearGradient>
-    <linearGradient id="rim" x1="20" y1="8" x2="110" y2="120" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F4FFF8" stop-opacity=".78"/>
-      <stop offset=".28" stop-color="#3BE0A3" stop-opacity=".82"/>
-      <stop offset=".7" stop-color="#1C6FEF" stop-opacity=".58"/>
-      <stop offset="1" stop-color="#000000" stop-opacity=".52"/>
-    </linearGradient>
-    <linearGradient id="depth" x1="38" y1="38" x2="102" y2="102" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0E3F35"/>
-      <stop offset=".5" stop-color="#0A7D5C"/>
-      <stop offset="1" stop-color="#1147B7"/>
-    </linearGradient>
-    <linearGradient id="face" x1="36" y1="31" x2="94" y2="96" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset=".24" stop-color="#F3FFF7"/>
-      <stop offset=".58" stop-color="#A8F6D2"/>
-      <stop offset="1" stop-color="#2FD19A"/>
-    </linearGradient>
-    <linearGradient id="lane" x1="42" y1="91" x2="95" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2AE29B"/>
-      <stop offset=".5" stop-color="#C7FFF0"/>
-      <stop offset="1" stop-color="#2B7BFF"/>
-    </linearGradient>
-    <linearGradient id="playDot" x1="90" y1="51" x2="101" y2="62" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset=".36" stop-color="#34E7AA"/>
-      <stop offset="1" stop-color="#1C63F0"/>
-    </linearGradient>
-    <linearGradient id="ground" x1="35" y1="108" x2="95" y2="108" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0ACB80"/>
-      <stop offset="1" stop-color="#1E63E9"/>
-    </linearGradient>
-    <filter id="lift" x="27" y="24" width="78" height="82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="5" flood-color="#000000" flood-opacity=".42"/>
-      <feDropShadow dx="-1" dy="-2" stdDeviation="1" flood-color="#FFFFFF" flood-opacity=".42"/>
-    </filter>
-    <filter id="dotShadow" x="84" y="46" width="22" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity=".5"/>
-    </filter>
   </defs>
 </svg>

@@ -381,6 +381,15 @@ svg {
   gap: 16px;
 }
 
+a.app-title {
+  width: max-content;
+  color: inherit;
+}
+
+a.app-title:hover h3 {
+  color: #1d1d1f;
+}
+
 .app-logo {
   width: 56px;
   height: 56px;
@@ -696,6 +705,230 @@ svg {
   margin: 0;
 }
 
+.app-main {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 108px 0 88px;
+}
+
+.app-landing-hero {
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1fr);
+  gap: clamp(36px, 6vw, 86px);
+  align-items: center;
+}
+
+.app-landing-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.app-landing-copy .app-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+}
+
+.app-landing-copy h1 {
+  margin: 0;
+  font-size: clamp(58px, 8vw, 104px);
+  line-height: 0.92;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.app-landing-line {
+  margin: 30px 0 0;
+  color: #111113;
+  font-size: clamp(42px, 6.4vw, 74px);
+  line-height: 0.98;
+  font-weight: 735;
+  letter-spacing: 0;
+}
+
+.app-landing-detail {
+  max-width: 540px;
+  margin: 20px 0 0;
+  color: #5c5c62;
+  font-size: clamp(19px, 2.1vw, 24px);
+  line-height: 1.32;
+  font-weight: 500;
+}
+
+.app-landing-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.app-landing-visual {
+  position: relative;
+  min-height: 620px;
+}
+
+.app-landing-visual::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 36px;
+  height: 170px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(10, 125, 79, 0.11), rgba(29, 99, 217, 0.12));
+  filter: blur(38px);
+}
+
+.app-phone-primary,
+.app-phone-secondary {
+  position: absolute;
+  bottom: 0;
+  width: clamp(218px, 24vw, 286px);
+}
+
+.app-phone-primary {
+  right: clamp(118px, 15vw, 172px);
+  z-index: 2;
+  transform: rotate(-6deg);
+}
+
+.app-phone-secondary {
+  right: 0;
+  bottom: 64px;
+  width: clamp(178px, 19vw, 230px);
+  z-index: 1;
+  transform: rotate(7deg);
+  opacity: 0.96;
+}
+
+.app-feature-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 44px 0 24px;
+  border-top: 1px solid var(--line);
+}
+
+.app-feature {
+  padding: 22px 0;
+}
+
+.app-feature strong {
+  display: block;
+  color: #111113;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.05;
+  font-weight: 720;
+}
+
+.app-feature span {
+  display: block;
+  max-width: 320px;
+  margin-top: 10px;
+  color: #5f5f65;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.app-shot-band {
+  margin-top: 42px;
+  padding: clamp(36px, 6vw, 64px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.app-main-quidit .app-shot-band {
+  background: linear-gradient(135deg, rgba(237, 244, 255, 0.98), rgba(255, 255, 255, 0.96));
+}
+
+.app-main-umpcall .app-shot-band {
+  background: linear-gradient(135deg, rgba(233, 247, 239, 0.98), rgba(255, 255, 255, 0.96));
+}
+
+.app-shot-copy h2,
+.app-link-panel h2 {
+  margin: 0;
+  color: #111113;
+  font-size: clamp(40px, 5.6vw, 68px);
+  line-height: 0.98;
+  font-weight: 735;
+  letter-spacing: 0;
+}
+
+.app-shot-copy p {
+  margin: 18px 0 0;
+  color: #5b5b61;
+  font-size: clamp(18px, 2.2vw, 23px);
+  line-height: 1.34;
+  font-weight: 500;
+}
+
+.app-shot-rail {
+  min-height: 500px;
+  position: relative;
+}
+
+.app-shot-phone {
+  position: absolute;
+  bottom: -64px;
+  width: clamp(152px, 17vw, 206px);
+}
+
+.app-shot-phone:nth-child(1) {
+  left: 0;
+  transform: rotate(-8deg);
+}
+
+.app-shot-phone:nth-child(2) {
+  left: 32%;
+  z-index: 2;
+}
+
+.app-shot-phone:nth-child(3) {
+  right: 0;
+  transform: rotate(8deg);
+}
+
+.app-link-panel {
+  margin-top: 58px;
+  padding: 34px 0 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(0, 0.65fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.app-link-panel nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.app-link-panel a {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8f8fa;
+  color: #111113;
+  font-size: 20px;
+  font-weight: 680;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.app-link-panel a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(18, 18, 20, 0.18);
+  background: #ffffff;
+}
+
 .legal-main {
   width: min(1040px, calc(100% - 40px));
   margin: 0 auto;
@@ -968,13 +1201,12 @@ svg {
 .contact-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
+  gap: 20px;
   align-items: center;
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: linear-gradient(135deg, #f6f6f8, #ffffff);
-  box-shadow: 0 16px 42px rgba(18, 18, 24, 0.07);
+  padding: 18px 0 4px;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  box-shadow: none;
 }
 
 .contact-panel p {
@@ -982,7 +1214,7 @@ svg {
 }
 
 .contact-panel .button {
-  min-width: 142px;
+  min-width: 128px;
   flex: 0 0 auto;
   justify-self: end;
   width: max-content;
@@ -1127,6 +1359,9 @@ svg {
 
   .product,
   .support,
+  .app-landing-hero,
+  .app-shot-band,
+  .app-link-panel,
   .legal-hero {
     grid-template-columns: 1fr;
     gap: 22px;
@@ -1153,6 +1388,37 @@ svg {
 
   .support-actions {
     grid-template-columns: 1fr;
+  }
+
+  .app-main {
+    padding-top: 96px;
+  }
+
+  .app-landing-hero {
+    min-height: auto;
+  }
+
+  .app-landing-visual {
+    min-height: 560px;
+    margin-top: 10px;
+  }
+
+  .app-phone-primary {
+    right: 42%;
+    transform: translateX(50%) rotate(-5deg);
+  }
+
+  .app-phone-secondary {
+    right: 14%;
+  }
+
+  .app-feature-row,
+  .app-link-panel nav {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shot-rail {
+    min-height: 470px;
   }
 
   .support-card {
@@ -1245,6 +1511,7 @@ svg {
   .intro-band,
   .apps,
   .support,
+  .app-main,
   .site-footer {
     width: calc(100% - 24px);
   }
@@ -1280,6 +1547,45 @@ svg {
 
   .product-detail {
     font-size: 18px;
+  }
+
+  .app-landing-copy .app-logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+  }
+
+  .app-landing-line {
+    font-size: clamp(38px, 11vw, 56px);
+  }
+
+  .app-landing-visual {
+    min-height: 500px;
+  }
+
+  .app-phone-primary {
+    width: 212px;
+  }
+
+  .app-phone-secondary {
+    width: 160px;
+    bottom: 58px;
+  }
+
+  .app-feature-row {
+    padding-top: 30px;
+  }
+
+  .app-shot-band {
+    padding: 28px 18px;
+  }
+
+  .app-shot-rail {
+    min-height: 390px;
+  }
+
+  .app-shot-phone {
+    width: 142px;
   }
 
   .product-visual {

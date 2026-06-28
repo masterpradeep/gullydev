@@ -869,27 +869,28 @@ a.app-title:hover h3 {
 
 .app-shot-rail {
   min-height: 500px;
-  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(8px, 2.2vw, 24px);
 }
 
 .app-shot-phone {
-  position: absolute;
-  bottom: -64px;
+  position: relative;
+  flex: 0 0 auto;
   width: clamp(152px, 17vw, 206px);
 }
 
 .app-shot-phone:nth-child(1) {
-  left: 0;
   transform: rotate(-8deg);
 }
 
 .app-shot-phone:nth-child(2) {
-  left: 32%;
   z-index: 2;
+  transform: translateY(-18px);
 }
 
 .app-shot-phone:nth-child(3) {
-  right: 0;
   transform: rotate(8deg);
 }
 
@@ -1418,7 +1419,15 @@ a.app-title:hover h3 {
   }
 
   .app-shot-rail {
-    min-height: 470px;
+    min-height: 430px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 18px 6px 4px;
+    scrollbar-width: none;
+  }
+
+  .app-shot-rail::-webkit-scrollbar {
+    display: none;
   }
 
   .support-card {
@@ -1581,11 +1590,16 @@ a.app-title:hover h3 {
   }
 
   .app-shot-rail {
-    min-height: 390px;
+    min-height: 330px;
+    padding-top: 8px;
   }
 
   .app-shot-phone {
-    width: 142px;
+    width: 128px;
+  }
+
+  .app-shot-phone:nth-child(2) {
+    transform: translateY(-10px);
   }
 
   .product-visual {

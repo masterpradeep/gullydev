@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0F1624">
+  <title>Get QuiDit</title>
+  <link rel="icon" href="../../assets/gullydev-mark.svg?v=elegant-3" type="image/svg+xml">
+  <style>
+    /* Self-contained so the redirect works even if site CSS is unavailable. */
+    :root { --navy:#0F1624; --card:#1A2332; --emerald:#34D399; --text:#E8EDF4; --muted:#8A97A8; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--navy); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 24px; text-align: center;
+    }
+    .card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px; padding: 32px 28px; max-width: 420px; width: 100%;
+    }
+    h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    p { color: var(--muted); font-size: 15px; line-height: 1.5; margin-bottom: 22px; }
+    .btn {
+      display: inline-block; background: var(--emerald); color: #06231A;
+      font-weight: 700; text-decoration: none; padding: 14px 22px;
+      border-radius: 12px; font-size: 15px;
+    }
+    .alt { display: block; margin-top: 16px; color: var(--muted); font-size: 13px; text-decoration: none; }
+    .alt a { color: var(--emerald); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Get QuiDit</h1>
+    <p id="status">Taking you to the app store&hellip;</p>
+    <a class="btn" id="cta" href="https://apps.apple.com/gb/app/quidit/id6784847133">Open the store</a>
+    <span class="alt">Changed your mind? <a href="../">Back to QuiDit</a></span>
+  </div>
+
+  <script>
+    // Store URLs — keep in sync with config/app_metadata.yaml in the CalledIt app.
+    var APP_STORE = 'https://apps.apple.com/gb/app/quidit/id6784847133';
+    var PLAY_STORE = '';                 // fill in when the Play listing is live
+    var FALLBACK = '../';                // QuiDit marketing page for desktop / unknown
+
+    var ua = navigator.userAgent || navigator.vendor || '';
+    var isIOS = /iphone|ipad|ipod/i.test(ua) ||
+                // iPadOS 13+ reports as Mac; disambiguate by touch support.
+                (/macintosh/i.test(ua) && 'ontouchend' in document);
+    var isAndroid = /android/i.test(ua);
+
+    var target;
+    if (isAndroid && PLAY_STORE) target = PLAY_STORE;
+    else if (isIOS) target = APP_STORE;
+    else if (isAndroid) target = FALLBACK;   // Android but no Play link yet → marketing
+    else if (PLAY_STORE) target = PLAY_STORE;
+    else target = APP_STORE || FALLBACK;
+
+    // Preserve any ?join=CODE the app appended, for future deep-link use.
+    var params = window.location.search || '';
+
+    var cta = document.getElementById('cta');
+    if (cta) cta.setAttribute('href', target + params);
+    // Small delay so the page paints before navigating (nicer on slow links).
+    window.setTimeout(function () {
+      window.location.replace(target + params);
+    }, 400);
+  </script>
+</body>
+</html>

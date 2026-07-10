@@ -409,7 +409,17 @@ a.app-title:hover h3 {
 }
 
 .app-logo-umpcall {
-  background: #0b1220;
+  background: transparent;
+  overflow: visible;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.app-logo-umpcall img {
+  width: 118%;
+  height: 118%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 16px rgba(15, 20, 35, 0.16));
 }
 
 .app-logo-quidit {
@@ -704,6 +714,12 @@ a.app-title:hover h3 {
   width: 64px;
   height: 64px;
   border-radius: 16px;
+}
+
+.app-landing-copy .app-logo-umpcall {
+  width: 76px;
+  height: 76px;
+  border-radius: 0;
 }
 
 .app-landing-copy h1 {

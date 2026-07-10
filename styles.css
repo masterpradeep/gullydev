@@ -409,33 +409,7 @@ a.app-title:hover h3 {
 }
 
 .app-logo-umpcall {
-  position: relative;
-  overflow: visible;
-  background: linear-gradient(145deg, #0f8d5e, #064b35);
-}
-
-.app-logo-umpcall img {
-  position: relative;
-  z-index: 2;
-  width: 136%;
-  height: 136%;
-  object-fit: contain;
-  object-position: center;
-  transform: translateY(-10%);
-  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.18));
-}
-
-.app-logo-umpcall::after {
-  content: "";
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 8%;
-  height: 16%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.16);
-  filter: blur(6px);
-  pointer-events: none;
+  background: #0b1220;
 }
 
 .app-logo-quidit {

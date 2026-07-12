@@ -1697,14 +1697,14 @@ a.app-title:hover h3 {
   }
 
   .hero-stage {
-    height: min(310px, 43svh);
+    height: min(320px, 43svh);
     width: min(420px, 100%);
-    margin-top: 24px;
+    margin-top: 44px;
   }
 
   .hero-phone {
-    width: min(44vw, 172px);
-    bottom: -58px;
+    width: min(41vw, 160px);
+    bottom: -88px;
   }
 
   .hero-phone-left {

@@ -745,6 +745,32 @@ a.app-title:hover h3 {
   font-weight: 760;
   letter-spacing: 0;
 }
+.app-title-ourinnings {
+  flex-wrap: nowrap;
+  gap: 14px;
+  min-width: 0;
+}
+
+.app-title-ourinnings .app-landing-name,
+.app-landing-copy .app-title-ourinnings h1.app-landing-name {
+  font-size: clamp(34px, 4.8vw, 62px);
+  line-height: 1.02;
+  white-space: nowrap;
+}
+
+.app-landing-copy .app-title-ourinnings .app-logo-ourinnings {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.product-ourinnings .app-title-ourinnings h3 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+
 
 .app-landing-line {
   margin: 30px 0 0;
@@ -1758,6 +1784,20 @@ a.app-title:hover h3 {
     font-size: 18px;
   }
 
+
+  .app-landing-copy .app-title-ourinnings .app-logo-ourinnings {
+    width: 56px;
+    height: 56px;
+  }
+
+  .app-landing-copy .app-title-ourinnings h1.app-landing-name {
+    font-size: clamp(26px, 7.2vw, 34px);
+  }
+
+  .product-ourinnings .app-title-ourinnings h3 {
+    font-size: clamp(22px, 6.5vw, 30px);
+  }
+
   .app-landing-copy .app-logo {
     width: 54px;
     height: 54px;
@@ -1907,3 +1947,15 @@ a.app-title:hover h3 {
     padding: 18px;
   }
 }
+
+@media (max-width: 340px) {
+  .app-landing-copy .app-title-ourinnings h1.app-landing-name {
+    white-space: normal;
+    font-size: clamp(24px, 8vw, 30px);
+  }
+
+  .product-ourinnings .app-title-ourinnings h3 {
+    white-space: normal;
+  }
+}
+
